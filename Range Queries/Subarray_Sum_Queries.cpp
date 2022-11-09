@@ -19,7 +19,7 @@ template <typename treetype>class segtree
     public:
     treetype operation(treetype operand1,treetype operand2)
     {
-        return {operand1[0]+operand2[0],max({operand1[0]+operand2[1],operand1[1],0}),max({operand2[2],operand2[0]+operand1[2],0}),max({0,operand1[3],operand2[3],operand1[2]+operand2[1]})};
+        return {operand1[0]+operand2[0],max({operand1[0]+operand2[1],operand1[1],0ll}),max({operand2[2],operand2[0]+operand1[2],0ll}),max({0ll,operand1[3],operand2[3],operand1[2]+operand2[1]})};
     }
     void merge(int pos)
     {
